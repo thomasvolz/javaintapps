@@ -14,7 +14,12 @@
 public class AppSelector {
 
 	public static void main(String[] args) {
-		System.out.println("Hey Buddy");
+		System.out.println("Running Simple Fib");
+		
+		Fibonacci newFib = new Fibonacci();
+		
+		newFib.simpleFib(20);
+		//System.out.println(newFib.simpleFib(2));
 
 	}
 
