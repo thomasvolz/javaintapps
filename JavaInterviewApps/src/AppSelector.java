@@ -18,8 +18,12 @@ public class AppSelector {
 		
 		Fibonacci newFib = new Fibonacci();
 		
-		newFib.simpleFib(20);
-		//System.out.println(newFib.simpleFib(2));
+		System.out.println("Printing a value of 20=6765");
+		System.out.println("The value is: "+newFib.simpleFib(20));
+		
+		System.out.println("Creating with arrayFib, size 20, should range to 6765");
+		
+		newFib.toString(newFib.arrayFib(20));
 
 	}
 

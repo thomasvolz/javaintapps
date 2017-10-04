@@ -27,7 +27,7 @@ public class Fibonacci {
 	 * THIS MUST BE A POSITIVE NUMBER
 	 * @return the calculated result from the position in the Fib Series
 	 */
-	int simpleFib(int seriesIndex)
+	protected int simpleFib(int seriesIndex)
 	{		
 		if(seriesIndex<=0)
 			return 0;
@@ -39,22 +39,52 @@ public class Fibonacci {
 		int numberTwo=1;
 		int result=1;	
 		
-		for(int i = 0; i < seriesIndex; i++)
+		for(int i = 0; i < seriesIndex-1; i++)
 		{
-			System.out.println(result);
+
 			result = numberOne+numberTwo;
 			numberOne=numberTwo;
 			numberTwo=result;
-			
 		}
 		
-		
-		
-		
-		
-		
-		
 		return result;
+	}
+	
+	/**
+	 * Method to create an array with 
+	 * all values in the defined
+	 * range for the Fibonacci series
+	 * 
+	 * @param listSize the size of the array/range for the Fib series
+	 **/
+	protected int[] arrayFib(int listSize)
+	{
+		int[] fibArray= new int[listSize+1];
+		
+		//This is easiest if the first two values are initialized
+		fibArray[0]=0;
+		fibArray[1]=1;	
+		
+		for(int i = 2; i < listSize+1; i++)
+		{
+			fibArray[i]=fibArray[i-1] + fibArray[i-2];
+		}
+		
+		return fibArray;
+		
+	}
+	
+	/**
+	 * toString method to list all values in 
+	 * a completed Fibonacci array
+	 * @param fibArray the completed Array to list values from
+	 */
+	protected void toString(int[] fibArray)
+	{
+		for(int i = 0; i < fibArray.length; i++)
+		{
+			System.out.println(fibArray[i]);
+		}
 	}
 
 }
