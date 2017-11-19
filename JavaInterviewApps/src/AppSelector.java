@@ -6,7 +6,8 @@
  * This main method will eventually allow you to select
  * the particular function you want to see executed.
  * 
- * For now, executions are hard coded
+ * I have added a case switcher but have a hard coded choice
+ * Future implementation will ask for user input
  *
  */
 
